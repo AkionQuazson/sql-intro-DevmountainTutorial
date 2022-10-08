@@ -1,0 +1,26 @@
+CREATE TABLE person(
+    id SERIAL PRIMARY KEY, 
+    name VARCHAR(40) NOT NULL, 
+    age INTEGER, 
+    height INTEGER NOT NULL,
+    city VARCHAR(30),
+    favorite_color VARCHAR(20)
+)
+
+INSERT INTO person (name, age, height, city, favorite_color)
+VALUES ('Akion', 44, 185, 'Amiere', 'orange'),
+('Rubia', 43, 168, 'Amiere', 'red'),
+('J', 27, 173, 'Sizir', 'yellow'),
+('Emme', 46, 177, 'Oaklan', 'purple'),
+('Amelia', 44, 159, 'Amiere', 'red');
+
+SELECT * 
+FROM person
+GROUP BY name
+ORDER BY 4 ASC;
+
+SELECT * 
+FROM person
+GROUP BY name
+ORDER BY 4 DESC;
+
